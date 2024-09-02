@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # a command that shows all listening ports
 if [ $# == 1 ]; then
     ping -c 5 $1
