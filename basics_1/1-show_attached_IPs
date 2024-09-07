@@ -3,4 +3,4 @@
 ipv4_addresses=$(ip -o -4 addr show scope global | awk '{split($4,a,"/"); print a[1]}')
 
 # Display the IPv4 addresses
-echo "$ipv4_addresses"
+sudo echo "$ipv4_addresses"
