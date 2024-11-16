@@ -1,6 +1,4 @@
 #!/usr/bin/env bash
-# Show all attached Ips
-ipv4_addresses=$(ip -o -4 addr show scope global | awk '{split($4,a,"/"); print a[1]}')
-
-# Display the IPv4 addresses
-sudo echo "$ipv4_addresses"
+# Get the list of active IPv4 addresses
+ip_addresses=$(ifconfig | awk '/inet / {print $2}')
+echo "$ip_addresses"
